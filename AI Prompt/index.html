@@ -1,0 +1,88 @@
+<!DOCTYPE zouraiz>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+  <title>AI Prompt Converter Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <button id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+    
+    <h1>AI Prompt Converter Pro</h1>
+    <p class="description">Transform casual text into professional, well-structured AI prompts</p>
+    
+    <div class="input-section">
+      <label for="userInput">Enter your basic prompt or idea:</label>
+      <textarea id="userInput" placeholder="Example: make a logo with a tree and mountains for my outdoor company"></textarea>
+      <span class="show-examples" id="showExamples">Show examples</span>
+      <div class="examples-popover" id="examplesPopover">
+        <div class="example-item" data-example="Create a website for my bakery business">Create a website for my bakery business</div>
+        <div class="example-item" data-example="Write a blog post about machine learning">Write a blog post about machine learning</div>
+        <div class="example-item" data-example="Make a logo for my pet grooming service">Make a logo for my pet grooming service</div>
+        <div class="example-item" data-example="Design an email newsletter about sustainability">Design an email newsletter about sustainability</div>
+        <div class="example-item" data-example="Write code for a contact form">Write code for a contact form</div>
+      </div>
+    </div>
+    
+    <div class="style-selector">
+      <label for="promptStyle">Select AI prompt style:</label>
+      <select id="promptStyle">
+        <option value="detailed">Detailed (comprehensive instructions)</option>
+        <option value="midjourney">Image Generation (Midjourney/DALL-E style)</option>
+        <option value="chatgpt">ChatGPT Optimized</option>
+        <option value="professional">Professional Business</option>
+        <option value="creative">Creative Writing</option>
+        <option value="custom">Custom Template</option>
+      </select>
+      <div id="customTemplateContainer" style="display: none; margin-top: 15px;">
+        <label for="customTemplate">Your custom template:</label>
+        <textarea id="customTemplate" placeholder="Create your own template using {input} as placeholder for user input">I need a comprehensive solution for: {input}
+
+Approach this with professional standards and include:
+1. Key requirements analysis
+2. Implementation details
+3. Expected outcomes</textarea>
+      </div>
+    </div>
+    
+    <div class="converter-controls">
+      <button id="convertBtn">Convert Prompt</button>
+      <button id="copyBtn" class="copy-btn">Copy Result</button>
+      <button id="saveBtn" class="save-btn">Save to History</button>
+    </div>
+    
+    <div class="output-section">
+      <label>Professional AI Prompt:</label>
+      <div class="output-container">
+        <div class="typing-text" id="outputText"></div>
+        <span class="cursor" id="cursor"></span>
+        <div class="loading" id="loadingIndicator">
+          <div class="dot-flashing"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="history-section" id="historySection">
+      <h3>
+        Your Prompt History
+        <span class="history-clear" id="clearHistory">Clear History</span>
+      </h3>
+      <div class="history-items" id="historyItems">
+        <!-- History items will be added here dynamically -->
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Use this tool to create professional prompts that get better results from AI tools.</p>
+      <p>Made with <i class="fas fa-heart" style="color: #ef4444;"></i> by Zouraiz</p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

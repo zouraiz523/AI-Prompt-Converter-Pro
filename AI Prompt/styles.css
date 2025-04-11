@@ -1,0 +1,213 @@
+   body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      color: #2563eb;
+      margin-top: 0;
+    }
+    
+    .description {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #64748b;
+    }
+    
+    .input-section, .output-section {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #475569;
+    }
+    
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      min-height: 120px;
+      font-size: 16px;
+      resize: vertical;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    
+    .converter-controls {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+      justify-content: center;
+    }
+    
+    .output-container {
+      position: relative;
+    }
+    
+    .output-textarea {
+      background-color: #f8fafc;
+      min-height: 150px;
+    }
+    
+    .output-container .loading {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(248, 250, 252, 0.7);
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      border-radius: 8px;
+    }
+    
+    .dot-flashing {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #2563eb;
+      color: #2563eb;
+      animation: dot-flashing 1s infinite linear alternate;
+      animation-delay: 0.5s;
+    }
+    
+    .dot-flashing::before, .dot-flashing::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+    }
+    
+    .dot-flashing::before {
+      left: -15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #2563eb;
+      color: #2563eb;
+      animation: dot-flashing 1s infinite alternate;
+      animation-delay: 0s;
+    }
+    
+    .dot-flashing::after {
+      left: 15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #2563eb;
+      color: #2563eb;
+      animation: dot-flashing 1s infinite alternate;
+      animation-delay: 1s;
+    }
+    
+    @keyframes dot-flashing {
+      0% {
+        background-color: #2563eb;
+      }
+      50%, 100% {
+        background-color: rgba(37, 99, 235, 0.2);
+      }
+    }
+    
+    button {
+      padding: 12px 24px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    button:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    
+    button:disabled {
+      background-color: #94a3b8;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .copy-btn {
+      background-color: #475569;
+    }
+    
+    .copy-btn:hover {
+      background-color: #334155;
+    }
+    
+    .style-selector {
+      margin-bottom: 20px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: white;
+    }
+    
+    .typing-text {
+      min-height: 150px;
+      padding: 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background-color: #f8fafc;
+      overflow-y: auto;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 18px;
+      background-color: #2563eb;
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #64748b;
+      font-size: 14px;
+    }
+    
+    
